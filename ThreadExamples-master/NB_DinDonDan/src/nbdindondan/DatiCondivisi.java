@@ -82,7 +82,7 @@ public class DatiCondivisi {
         }
         return x;
     }
-    public void aggiungi(String x) {
+    public synchronized void aggiungi(String x) {
         if (p >= maxElem)
             p = 0;
         schermo[p]=x;
