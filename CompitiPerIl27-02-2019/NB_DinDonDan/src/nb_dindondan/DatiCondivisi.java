@@ -26,12 +26,16 @@ public class DatiCondivisi {
     int maxElem = 10000000;
     String schermo[];
     int p;
-    private Semaphore sem;
-
+    private Semaphore sem1;
+    private Semaphore sem2;
+    private Semaphore sem3;
+    
     public DatiCondivisi() {
         this.schermo = new String[maxElem];
         this.p = 0;
-        sem = new Semaphore(-2);
+        sem1 = new Semaphore(1);
+        sem2 = new Semaphore(0);
+        sem3 = new Semaphore(0);
     }
 
     public DatiCondivisi(int contaDIN, int contaDON, int contaDAN) {
